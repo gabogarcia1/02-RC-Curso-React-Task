@@ -7,9 +7,11 @@ export const Task = ({ taskData }) => {
     const [addDataCard, setAddDataCard] = useState(taskData)
 
     const onClickAdd = (newTask) => {
+        console.log(addDataCard.length)
+
 
         const newTaskObj = {
-            id: addDataCard[addDataCard.length - 1].id + 1,
+            id: addDataCard.length == 0 ? 1 : addDataCard[addDataCard.length - 1].id + 1,
             taskTitle:newTask
         }
 
