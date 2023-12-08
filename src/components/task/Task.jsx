@@ -12,6 +12,7 @@ export const Task = ({ taskData }) => {
 
         const newTaskObj = {
             id: addDataCard.length == 0 ? 1 : addDataCard[addDataCard.length - 1].id + 1,
+            //PARA CONSEGUIR ULTIMO INDICE SE PUEDE USAR .at(-1) en vez de unar el addDataCard.length -1
             taskTitle: newTask
         }
 
